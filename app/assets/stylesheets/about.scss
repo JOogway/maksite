@@ -1,0 +1,88 @@
+// Place all the styles related to the About controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$lowres: 459px;
+$midres: 719px;
+$hres: 1023px;
+$uhres: 1599px;
+.about-me{
+	animation: fadein 1.5s;
+	background-color: rgba(225,225,225,0.65);
+	padding: 3% 10%;
+	overflow: hidden;
+	font-family: 'Lato';
+	box-shadow: 14px 15px 56px -1px rgba(0,0,0,0.75);
+	margin-bottom: 100px;
+}
+.portrait{
+	vertical-align: top;
+	width: 100%;
+	padding: 1px;
+	display: inline-block;
+
+	img{
+		width: 100%;
+
+	}
+}
+.introduction{
+	width: 100%;
+	font-size: 30px;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+
+@media only screen and (max-width: $lowres) {
+	.about-me{
+		width: 100%;
+		padding: 0;
+	}
+	.portrait{
+		display: block;
+	}
+	.introduction{
+		float: none;
+		p{
+			font-size: 14px;
+		}
+	}
+}
+@media only screen and (max-width: $midres) {
+	.about-me{
+		width: 100%;
+		padding: 0;
+	}
+	.portrait{
+		display: block;
+		width: 100%;
+	}
+	.introduction{
+		font-size: 20px;
+		float: none;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: $hres) {
+
+	.introduction{
+		float: none;
+		p{
+			font-size: 20px;
+		}
+	}
+}
+@media only screen and (max-width: $uhres) {
+	.about-me{
+		padding: 3% 5%;
+		overflow: hidden;
+	}
+	.portrait{
+	}
+	.introduction{
+		p{
+			font-size: 20px;
+		}
+	}
+
+}

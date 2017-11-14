@@ -1,0 +1,13 @@
+%h1{:style => "font-family:lora"} Listing Articles
+%br
+%hr
+%p 
+ = link_to 'New Article', new_article_path, :class=> "btn btn-primary"
+.article-preview.col-lg-12
+ - @articles.each do |article|
+  = link_to image_tag(article.image.url(:small)), article.image.url
+  = article.title.html_safe
+  = article.text.html_safe 
+  = link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' },  :class=> "btn btn-danger"                          
+  = link_to 'Edit', edit_article_path(article), :class=> "btn btn-secondary"
+  = link_to 'Show', article, :class=> "btn btn-info"

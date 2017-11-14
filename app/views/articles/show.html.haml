@@ -1,0 +1,9 @@
+.article-detailed
+ = image_tag(@article.image.url(:med))
+ %h1
+  = @article.title.html_safe
+ %p
+  = @article.text.html_safe
+ .mini-footer
+  = @article.created_at.strftime("%d/%m/%Y")
+  = link_to 'Back', news_news_path, class: "btn btn-info"

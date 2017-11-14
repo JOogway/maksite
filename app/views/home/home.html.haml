@@ -1,0 +1,15 @@
+.jumbotron.intro
+.jumbotron.col-lg-12.first-home-part
+ %h1 Last article
+ %hr
+ .single_article
+  = link_to image_tag(@article.image.url(:small)), @article
+  %h1
+   = @article.title.html_safe
+  %p
+   = @article.text.at(0..275).html_safe
+   = '...'
+   = link_to 'Read more', @article
+  .mini-footer
+   = @article.created_at.strftime("%d/%m/%Y")
+ %hr

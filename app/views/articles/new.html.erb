@@ -1,0 +1,24 @@
+<h1>New Article</h1>
+<br>
+<hr>
+<div class="article-preview col-lg-12">
+<%= form_for @article, :url => articles_path, local: true, :html => { multipart: true } do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text, :style => "resize:both;" %>
+  </p>
+  <p>
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+  </p>
+  <p>
+    <%= form.submit class: 'btn-primary' %>
+  </p>
+<% end %>
+</div>
+<%= link_to 'Back', articles_path, :class => "btn btn-info", :style => "margin: 1rem;" %>

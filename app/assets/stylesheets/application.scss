@@ -1,0 +1,213 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ /******************************
+*********GLOBAL SETTINGS********
+*******************************/
+@import "bootstrap";
+@import "home";
+@import "about";
+@import "contact";
+@import "devise";
+@import "articles";
+@import "news";
+@import "links";
+@import "projects";
+
+$lora: 'Lora', serif;
+$manuale: 'Manuale', serif;
+$consol: 'Inconsolata', monospace;
+$lato: 'Lato', sans-serif;
+
+$lowres: 459px;
+$midres: 719px;
+$hres: 1023px;
+$uhres: 1599px;
+
+body{
+	margin: 0;
+	padding: 0;
+
+}
+.maincontainer{
+	padding: 0 15%;
+	min-height: 80vh;
+}
+#background{
+	background-image: url("hexbg.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-color: transparent;
+	min-height: 100%;
+	min-width: 100%;
+	margin: 0;
+	z-index: -1;
+}
+nav{
+	padding: 0;
+	margin: 0;
+	animation: fadein 1.5s;
+}
+#main-window{
+	width: 100%;
+	height: 110vh;
+}
+
+.navbar{
+	margin: 0;
+	margin-bottom: 1vw;
+	box-shadow: 0px 0px 45px 1px rgba(0,0,0,0.75);
+	font-family: $lora;
+	font-size: 1.1rem;
+	a{
+		color: black;
+	}
+}
+.button-default{
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+.navbar{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+footer{
+	margin-top: 25px;
+	animation: fadein 1.5s;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(108, 122, 137,0.75);
+	font-size: 15px;
+	h1{
+		font-family: $manuale;
+		color: rgba(150, 150, 150,0.75);
+		&:hover{
+			color: rgba(150, 150, 150,0.75);
+			animation: color-me-in 4s;
+		}
+	}
+	a{
+		color: rgba(150, 150, 150,0.75);
+		padding: 0 3px;
+		font-size: 2em;
+		transition: color 0.3s, opacity 2s;
+	}
+
+}
+@keyframes color-me-in {
+  0% {
+    color: rgb(150, 150, 150);
+  }
+  10% {
+    color: rgb(127, 0, 255);
+  }
+  20% {
+    color: rgb(255, 0, 255);
+  }
+  30% {
+    color: rgb(255, 0, 127);
+  }
+  40% {
+    color: rgb(255, 0, 0);
+  }
+  40% {
+    color: rgb(255, 127, 0);
+  }
+  50% {
+    color: rgb(255, 255, 0);
+  }
+  60% {
+    color: rgb(127, 255, 0);
+  }
+  70% {
+    color: rgb(0, 250, 0);
+  }
+  80% {
+    color: rgb(0, 255, 127);
+  }
+  90% {
+    color: rgb(0, 255, 255);
+  }
+  100%{
+  	color: rgb(0, 127, 255);
+  }
+}
+#linked-icon:hover{
+	color: #0077B5;
+}
+#facebook-icon:hover{
+	color: #3B5998;
+}
+#linode-icon:hover{
+	color: #3C4;
+}
+#ruby-icon:hover{
+	color: #C02F1D;
+}
+#wrench-icon{
+	opacity: 0;
+	color: silver;
+}
+#wrench-icon:hover{
+	opacity: 1;
+}
+#off-icon:hover{
+	color: red;
+}
+@media only screen and (max-width: $uhres) {
+	
+}
+@media only screen and (max-width: $hres) {
+	
+}
+@media only screen and (max-width: $midres) {
+	#background{
+		background-image: url("hexbg2.jpeg");
+	}
+	.maincontainer{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	.navbar{
+		margin: 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: $lowres) {
+	#background{
+		background-image: url("hexbg2.jpeg");
+	}
+	.maincontainer{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	.navbar{
+		margin: 0;
+		width: 100%;
+	}
+}
+
