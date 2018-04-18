@@ -7,7 +7,7 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,:recoverable,
   :rememberable, :trackable, :validatable
   has_many :articles
-  
+  has_many :comments
   def validate_invite
     #if self.invite != ""
       #self.errors[:base] << "The Invitation Code is Incorrect"
