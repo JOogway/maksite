@@ -4,6 +4,9 @@
   = @article.title.html_safe
  %p
   = @article.text.html_safe
+ %p.tag 
+  = 'Category:'
+  = @article.tag
  .mini-footer
   = @article.created_at.strftime("%d/%m/%Y")
   = link_to 'Back', news_news_path, class: "btn btn-info"

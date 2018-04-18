@@ -1,4 +1,7 @@
 %hr
+ %ul.button-group
+  %li= sortable 'Title','title', 'desc'
+  %li= sortable 'Date','created_at', 'asc'
 - @articles.each do |article| 
  .single_article
   = link_to image_tag(article.image.url(:small)), article
@@ -8,6 +11,9 @@
    = article.text.at(0..275).html_safe
    = '...'
    = link_to 'Read more', article
+  %br
+   = '#'
+   = article.tag
   .mini-footer
    = article.created_at.strftime("%d/%m/%Y")
  %hr

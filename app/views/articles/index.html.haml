@@ -3,6 +3,10 @@
 %hr
 %p 
  = link_to 'New Article', new_article_path, :class=> "btn btn-primary"
+ %p Sort by: 
+ = link_to "Time", articles_path(order: 'time')
+ = link_to "Tag", articles_path(order: 'tag')
+ = link_to "Title", articles_path(order: 'title')
 .article-preview.col-lg-12
  - @articles.each do |article|
   = link_to image_tag(article.image.url(:small)), article.image.url
@@ -11,3 +15,4 @@
   = link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' },  :class=> "btn btn-danger"                          
   = link_to 'Edit', edit_article_path(article), :class=> "btn btn-secondary"
   = link_to 'Show', article, :class=> "btn btn-info"
+  %hr

@@ -1,3 +1,17 @@
 // Place all the styles related to the News controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tag{
+	float: left;
+}
+.button-group{
+	li a{
+	color: gold;
+	text-shadow: 1px 1px #707070;
+	}
+	li{
+	display: inline;
+	text-decoration: none;
+	color: gold;
+	}
+}

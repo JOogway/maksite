@@ -1,7 +1,7 @@
 class Admin < ApplicationRecord
 	
-	validate :validate_invite, :on => :create
-	attr_accessor :invite
+	#validate :validate_invite, :on => :create
+	#attr_accessor :invite
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,:recoverable,
@@ -9,8 +9,8 @@ class Admin < ApplicationRecord
   has_many :articles
   
   def validate_invite
-    if self.invite != "kutasisko"
-      self.errors[:base] << "The Invitation Code is Incorrect"
-    end
+    #if self.invite != ""
+      #self.errors[:base] << "The Invitation Code is Incorrect"
+    #end
   end
 end
