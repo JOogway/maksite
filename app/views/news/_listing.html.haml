@@ -1,6 +1,7 @@
 %hr
  %ul.button-group
-  %li= sortable 'Title','title', 'desc'
+  ="Sort by: "
+  %li= sortable 'Title','title', 'asc'
   %li= sortable 'Date','created_at', 'asc'
 - @articles.each do |article| 
  .single_article

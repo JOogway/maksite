@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 	before_action :authenticate_admin!, :except => [:sign_in, :show]
+	helper_method :sort_direction
 	def index
 		@articles = Article.all
 	end
@@ -34,6 +35,6 @@ class ArticlesController < ApplicationController
 	end
 	private
   	def article_params
-    	params.require(:article).permit(:title, :text, :image,:tag)
+    	params.require(:article).permit( :title, :text, :image, :tag)
   	end
 end
