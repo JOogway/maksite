@@ -3,6 +3,7 @@
  %h1 Last article
  %hr
  .single_article
+ -if @article
   = link_to image_tag(@article.image.url(:small)), @article
   %h1
    = @article.title.html_safe
@@ -12,4 +13,6 @@
    = link_to 'Read more', @article
   .mini-footer
    = @article.created_at.strftime("%d/%m/%Y")
+ -else
+  = "Sorry no articles yet"
  %hr

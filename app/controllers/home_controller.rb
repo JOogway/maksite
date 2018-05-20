@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def home
-  	@article = Article.order('created_at').last
+  	if Article.exists?
+  		@article = Article.order('created_at').last
+  	end
   end
 end
