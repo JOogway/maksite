@@ -5,7 +5,7 @@
   %li= sortable 'Date','created_at', 'asc'
 - @articles.each do |article| 
  .single_article
-  = link_to image_tag(article.image.url(:small)), article
+  = link_to image_tag(article.image.variant(resize:"400x400")), article
   %h1
    = article.title.html_safe
   %p

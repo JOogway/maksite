@@ -9,7 +9,7 @@
  = link_to "Title", articles_path(order: 'title')
 .article-preview.col-lg-12
  - @articles.each do |article|
-  = link_to image_tag(article.image.url(:small)), article.image.url
+  = link_to image_tag(article.image), article.image
   = article.title.html_safe
   = article.text.html_safe 
   = link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' },  :class=> "btn btn-danger"                          

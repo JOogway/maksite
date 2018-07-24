@@ -9,6 +9,7 @@
     = stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Inconsolata%7CLato%7CLora%7CManuale'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'https://use.fontawesome.com/5b6b4589c6.js'
+    = javascript_include_tag 'agent'
   %body
     #background
       .row
@@ -47,4 +48,3 @@
         - if current_admin
           = link_to '<i class="fa fa-power-off" aria-hidden="true"></i>'.html_safe, destroy_admin_session_path, :id => "off-icon", method: :delete
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
-    
