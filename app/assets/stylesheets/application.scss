@@ -24,6 +24,8 @@
 @import "links";
 @import "projects";
 @import 'foundation-icons';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 $lora: 'Lora', serif;
 $manuale: 'Manuale', serif;
@@ -100,6 +102,9 @@ footer{
 	left: 0;
 	background-color: rgba(108, 122, 137,0.75);
 	font-size: 15px;
+	#sessionDialog{
+		color: silver;
+	}
 	h1{
 		font-family: $manuale;
 		color: rgba(150, 150, 150,0.75);

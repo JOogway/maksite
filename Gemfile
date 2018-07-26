@@ -16,6 +16,7 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap'
+gem 'font-awesome-sass'
 gem 'jquery-rails'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether'
@@ -34,7 +35,6 @@ gem 'devise'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 gem 'haml'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

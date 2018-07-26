@@ -1,0 +1,7 @@
+.comment_field
+- @article.comments.each do |comment|
+ %h4
+ =comment.user_id
+ %p
+ =comment.content
+ %hr
