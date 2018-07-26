@@ -89,11 +89,16 @@ $uhres: 1599px;
 		font-size: 14px;
 		color: #FF5757;
 	}
+	.btn-back{
+		margin-bottom: 10px;
+	}
 }
 .mini-footer{
 	position: relative;
 	text-align: right;
 	bottom: 0;
+	margin: 10px 0;
+	padding: 15px 1%;
 }
 @media only screen and (max-width: $midres) {
 		.article-detailed{

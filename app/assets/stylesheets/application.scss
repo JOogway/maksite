@@ -14,18 +14,19 @@
  /******************************
 *********GLOBAL SETTINGS********
 *******************************/
-@import "bootstrap";
-@import "home";
 @import "about";
+@import "articles";
+@import "bootstrap";
 @import "contact";
 @import "devise";
-@import "articles";
+@import "home";
 @import "news";
 @import "links";
 @import "projects";
 @import 'foundation-icons';
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "comments";
 
 $lora: 'Lora', serif;
 $manuale: 'Manuale', serif;
