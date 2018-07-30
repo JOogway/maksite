@@ -21,5 +21,9 @@ class SessionsController < ApplicationController
   	session[:user_id] = nil
     redirect_to '/signup'
   end
+  def logout
+    session[:user_id] = nil
+    redirect_to '/signup'
+  end
 
 end

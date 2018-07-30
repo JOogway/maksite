@@ -52,3 +52,7 @@
         = link_to '<i class="fa fa-wrench" aria-hidden="true"></i>'.html_safe, articles_path, :id => "wrench-icon"
         - if current_admin
           = link_to '<i class="fa fa-power-off" aria-hidden="true"></i>'.html_safe, destroy_admin_session_path, :id => "off-icon", method: :delete
+        - if current_user
+          = link_to '<i class="fa fa-power-off" aria-hidden="true"></i>'.html_safe, destroy_user_session_path, :id => "off-icon", method: :delete
+
+          

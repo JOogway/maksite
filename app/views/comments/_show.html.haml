@@ -1,7 +1,6 @@
 - @article.comments.each do |comment|
  .comment_field
-  %h4
-  =comment.user.email
-  %p
-  =comment.content
+  %h5="#{comment.user.email}"
+  %h6="#{comment.created_at}"
+  %p=comment.content
   %hr
