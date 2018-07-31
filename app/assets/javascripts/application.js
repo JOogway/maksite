@@ -19,6 +19,3 @@
 //= require_tree .
 //= require agentless
 
-var User={};
-User.credentials={};
-User.credentials.name = "Kevin";

@@ -7,12 +7,12 @@ class ApplicationController < ActionController::Base
   end
   
   def authorize
-    redirect_to '/login' unless current_user
+    redirect_to '/users/sign_in' unless current_user
   end
   
   protected
   def configure_permitted_parameters
-  	devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password,:password_confirmation, :invite])
+  	devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password,:password_confirmation, :invite])
   end
 
   private

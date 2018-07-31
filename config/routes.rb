@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :admins
+  devise_for :users, :controllers => { registrations: 'registrations' }
   #match "*path" => redirect("https://www.maksite.eu/%{path}"),via: [:get, :post], :constraints => { :protocol => "http://" }
   #match "*path" => redirect("https://www.maksite.eu/%{path}"),via: [:get, :post], :constraints => { :subdomain => "" }
-  devise_for :admins
   get 'articles/new'
 
   root 'home#home'
@@ -24,11 +24,9 @@ Rails.application.routes.draw do
   get 'projects/projects'
 
   get 'news/news'
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/sign_in' => 'sessions#new'
+  post '/sign_in' => 'sessions#create'
+  get '/sign_out' => 'sessions#destroy'
 
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

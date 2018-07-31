@@ -13,17 +13,16 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
     # If user's login doesn't work, send them back to the login form.
-      redirect_to '/signup'
+      redirect_to '/sign_up'
     end
   end
 
   def destroy
   	session[:user_id] = nil
-    redirect_to '/signup'
+    redirect_to '/sign_in'
   end
   def logout
     session[:user_id] = nil
-    redirect_to '/signup'
+    redirect_to '/sign_in'
   end
-
 end
