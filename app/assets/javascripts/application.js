@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require rails-ujs
+//= require popper
 //= require turbolinks
 //= require tether
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
 //= require agentless
-

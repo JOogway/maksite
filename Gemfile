@@ -34,6 +34,7 @@ gem 'devise'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
+gem 'popper_js'
 gem 'haml'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
