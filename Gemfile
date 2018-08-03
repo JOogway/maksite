@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+  "http://github.com/#{repo_name}.git"
 end
 
 
@@ -15,10 +15,11 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'sassc'
 gem 'bootstrap'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
-source 'https://rails-assets.org' do
+source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-tether'
 end
 gem 'foundation-icons-sass-rails'

@@ -1,6 +1,6 @@
 GEM
-  remote: https://rubygems.org/
-  remote: https://rails-assets.org/
+  remote: http://rubygems.org/
+  remote: http://insecure.rails-assets.org/
   specs:
     actioncable (5.2.0)
       actionpack (= 5.2.0)
@@ -242,6 +242,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   rails-assets-tether!
   sass-rails (~> 5.0)
+  sassc
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
