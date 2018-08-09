@@ -1,15 +1,14 @@
 class CommentsController < ApplicationController
 	before_action :find_article, :authorize
 	def create
-		#@article = Article.find(params[:article_id])
+		@article = Article.find(params[:article_id])
         #@comment = @article.comments.create(params[:comment].permit(:name, :comment))
         #redirect_to article_path(@article)
-        @comment = @article.comments.create(params[:comment].permit(:content))	
+        @comment = @article.comments.create(params[:content].permit(:content))	
         if current_user
         	@comment.user_id = current_user.id
         	@comment.save
-        end
-        if current_admin_user
+        elsif current_admin_user
         	@comment.admin_id = current_admin.id
         	@comment.save
         end
