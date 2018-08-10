@@ -37,7 +37,7 @@
         %p#sessionDialog
           - if current_user 
             = "Logged as"
-            %span#usertag= "#{current_user.username}"
+            %span#usertag= "#{current_user_user.username}"
           - if !current_admin.nil?
             = "Greetings commander,"
             %span#usertag= "#{current_admin.username}"

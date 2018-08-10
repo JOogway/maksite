@@ -3,8 +3,6 @@ class CreateArticles < ActiveRecord::Migration[5.1]
     create_table :articles do |t|
       t.string :title
       t.text :text
-      #t.attachment :image
-      #t.add_attachment :image
 
       t.timestamps
     end
