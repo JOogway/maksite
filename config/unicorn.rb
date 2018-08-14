@@ -1,7 +1,7 @@
 # set path to the application
 app_dir File.expand_path("../..", __FILE__)
-shared_dir = "#{app_dir}/shared"
-working_directory app_dir
+shared_dir = "#{maksite}/shared"
+working_directory maksite
 
 # Set unicorn options
 worker_processes 2
