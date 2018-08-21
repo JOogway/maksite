@@ -10,5 +10,5 @@
  .mini-footer
   = link_to 'Back', news_news_path, class: "btn btn-info btn-back"
   = @article.created_at.strftime("%d/%m/%Y")
- = render @article.comments
- = render 'comments/form'
+ -#= render 'comments/index'
+ -#= render 'comments/form'

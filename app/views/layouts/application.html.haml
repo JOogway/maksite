@@ -37,10 +37,10 @@
         %p#sessionDialog
           - if current_user 
             = "Logged as"
-            %span#usertag= "#{current_user_user.username}"
+            %span#usertag= "#{current_user_user.email}"
           - if !current_admin.nil?
             = "Greetings commander,"
-            %span#usertag= "#{current_admin.username}"
+            %span#usertag= "#{current_admin.email}"
         %h1{:style=>"font-size: 20px;"}
           = raw('Maksym Zieliński') 
           = Time.current.year
